@@ -33,13 +33,13 @@
     "build": "nuxt build",
     "dev": "nuxt",
     "start": "nuxt start",
-    "test": "yarn test:unit",
+    "test": "npm run test:unit",
     "test:e2e": "cd \"src\" && cypress run",
     "test:e2e:open": "cd \"src\" && cypress open",
     "test:unit": "cd \"src\" && jest",
     "coverage": "cd \"src\" && codecov",
-    "build:firebase": "yarn clean && yarn build && yarn copy && cd \"functions\" && yarn",
-    "clean": "yarn clean:public && yarn clean:functions && yarn clean:static",
+    "build:firebase": "npm run clean && npm run build && npm run copy && cd \"functions\" && npm run",
+    "clean": "npm run clean:public && npm run clean:functions && npm run clean:static",
     "clean:functions": "rimraf \"functions/node_modules\" && rimraf \"functions/.nuxt\"",
     "clean:public": "rimraf \"public/*.!(md)\" && rimraf \"public/_nuxt\"",
     "clean:static": "rimraf \"src/static/sw.js\"",
@@ -101,7 +101,7 @@
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=6.4.1",
-    "yarn": ">=1.12.1"
+    "npm run": ">=1.12.1"
   },
   "husky": {
     "hooks": {
