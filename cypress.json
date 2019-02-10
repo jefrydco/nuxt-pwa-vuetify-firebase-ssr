@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3000/",
+  "fixturesFolder": "src/test/e2e/fixtures",
+  "integrationFolder": "src/test/e2e/integration",
+  "screenshotsFolder": "src/test/e2e/screenshots",
+  "pluginsFile": "src/test/e2e/plugins/index.js",
+  "videosFolder": "src/test/e2e/videos",
+  "supportFile": "src/test/e2e/support/index.js",
+  "viewportWidth": 1366,
+  "viewportHeight": 768
+}

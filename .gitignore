@@ -1,12 +1,16 @@
+# Functions
+functions/.nuxt
+functions/node_modules
+
 # Cypress screenshots and videos
-src/test/e2e/screenshots
-src/test/e2e/videos
+test/e2e/screenshots
+test/e2e/videos
 
 # Nuxt Plugin
-src/static/sw.js
-src/static/browserconfig.xml
-
-.firebase
+static/sw.js
+static/browserconfig.xml
+static/OneSignalSDKUpdaterWorker.js
+static/OneSignalSDKWorker.js
 
 # Logs
 logs
