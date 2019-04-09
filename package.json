@@ -42,7 +42,7 @@
     "build:firebase": "yarn clean && yarn build && yarn copy && cd \"functions\" && yarn",
     "clean": "yarn clean:public && yarn clean:functions && yarn clean:static",
     "clean:functions": "rimraf \"functions/node_modules\" && rimraf \"functions/.nuxt\"",
-    "clean:public": "rimraf \"public/*.!(md)\" && rimraf \"public/_nuxt\"",
+    "clean:public": "rimraf \"public/**/*.*!(md)\" && rimraf \"public/_nuxt\"",
     "clean:static": "rimraf \"src/static/sw.js\"",
     "copy": "cpx \"functions/.nuxt/dist/*\" \"public/_nuxt\" && cpx \"src/static/**/*.*!(md)\" \"public\"",
     "deploy": "firebase deploy --only functions,hosting",
