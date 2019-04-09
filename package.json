@@ -33,6 +33,7 @@
     "build": "nuxt build",
     "dev": "nuxt",
     "start": "nuxt start",
+    "generate": "nuxt generate",
     "test": "yarn test:unit",
     "test:e2e": "cypress run",
     "test:e2e:open": "cypress open",
