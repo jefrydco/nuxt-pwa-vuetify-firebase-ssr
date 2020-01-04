@@ -1,10 +1,8 @@
-import nodeExternals from "webpack-node-externals";
-import VuetifyLoaderPlugin from "vuetify-loader/lib/plugin";
-require("dotenv").config();
+const isDev = process.env.NODE_ENV !== "production";
 
 export default {
   // https://nuxtjs.org/api/configuration-modern
-  modern: true,
+  modern: !isDev,
 
   // https://nuxtjs.org/api/configuration-srcdir
   srcDir: "src",
@@ -16,9 +14,9 @@ export default {
   head: {
     titleTemplate(title) {
       if (title) {
-        return `${title} - Nuxt PWA Vuetify`;
+        return `${title} - Nuxt PWA Vuetify Firebase SSR`;
       }
-      return "Nuxt PWA Vuetify";
+      return "Nuxt PWA Vuetify Firebase SSR";
     },
     meta: [
       { charset: "utf-8" },
@@ -29,26 +27,14 @@ export default {
 
   // https://nuxtjs.org/api/configuration-modules
   modules: [
-    // https://axios.nuxtjs.org/
-    "@nuxtjs/axios",
-
-    // https://nuxtjs.org/faq/cached-components/
-    "@nuxtjs/component-cache",
-
-    // https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv",
+    // https://http.nuxtjs.org/
+    "@nuxt/http",
 
     // https://pwa.nuxtjs.org/
-    "@nuxtjs/pwa",
-
-    // https://github.com/nuxt-community/sitemap-module
-    "@nuxtjs/sitemap",
+    "@nuxtjs/pwa"
 
     // https://github.com/nuxt-community/sentry-module
     // "@nuxtjs/sentry",
-
-    // https://github.com/Developmint/nuxt-webfontloader
-    "nuxt-webfontloader"
 
     // https://github.com/nuxt-community/analytics-module
     // [
@@ -60,26 +46,23 @@ export default {
     // ]
   ],
 
-  webfontloader: {
-    google: {
-      families: ["Roboto:100,300,400,500,700,900", "Material+Icons"]
-    }
-  },
+  buildModules: [
+    // Simple usage
+    "@nuxtjs/vuetify"
+  ],
+
+  vuetify: {},
 
   // https://nuxtjs.org/api/configuration-plugins
-  plugins: ["~/plugins/vuetify", "~/plugins/vee-validate"],
+  plugins: [],
 
   // https://nuxtjs.org/api/configuration-css
-  css: ["~/assets/styles/vuetify.styl"],
-
-  // https://nuxtjs.org/api/configuration-watch
-  watch: ["~/vuex/**/*.js"],
+  css: ["~assets/styles/app"],
 
   // https://nuxtjs.org/api/configuration-build
   build: {
-    extractCSS: true,
-    transpile: [/^vuetify/],
-    plugins: [new VuetifyLoaderPlugin()],
+    extractCSS: !isDev,
+    transpile: ["vee-validate/dist/rules"],
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -91,13 +74,6 @@ export default {
             fix: true
           }
         });
-      }
-      if (process.server) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^vuetify/]
-          })
-        ];
       }
     }
   }

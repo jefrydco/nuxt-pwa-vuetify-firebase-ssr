@@ -6,17 +6,15 @@
 
 This starter project includes official Nuxt.js modules for best PWA project:
 
-- [Axios](https://github.com/nuxt-community/axios-module)
-- [Component-cache](https://github.com/nuxt-community/modules/tree/master/packages/component-cache)
+- [Http](https://github.com/nuxt/http)
 - [Google-analytics](https://github.com/nuxt-community/analytics-module)
 - [PWA](https://github.com/nuxt-community/pwa-module)
 - [Sentry](https://github.com/nuxt-community/sentry-module)
-- [Sitemap](https://github.com/nuxt-community/sitemap-module)
 
 It is also enriched with the best Vue's UI framework:
 
 - [Vuetify](https://vuetifyjs.com)
-- [VeeValidate](https://baianat.github.io/vee-validate/)
+- [VeeValidate](https://logaretm.github.io/vee-validate)
 
 ## Setup
 

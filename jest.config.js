@@ -2,7 +2,8 @@ module.exports = {
   verbose: true,
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
-    "^~/(.*)$": "<rootDir>/src/$1"
+    "^~/(.*)$": "<rootDir>/src/$1",
+    "^vue$": "vue/dist/vue.common.js"
   },
   moduleFileExtensions: [
     "js",
@@ -27,6 +28,7 @@ module.exports = {
     "!**/node_modules/**",
     "!**/coverage/**"
   ],
-  coverageDirectory: "<rootDir>/src/test/unit/coverage",
-  snapshotSerializers: ["jest-serializer-vue"]
+  coverageDirectory: "<rootDir>/test/unit/coverage",
+  snapshotSerializers: ["jest-serializer-vue"],
+  transformIgnorePatterns: ["node_modules/(?!vee-validate/dist/rules)"]
 };

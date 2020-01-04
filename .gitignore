@@ -5,14 +5,14 @@ functions/.nuxt
 functions/node_modules
 
 # Cypress screenshots and videos
-test/e2e/screenshots
-test/e2e/videos
+src/test/e2e/screenshots
+src/test/e2e/videos
 
 # Nuxt Plugin
-static/sw.js
-static/browserconfig.xml
-static/OneSignalSDKUpdaterWorker.js
-static/OneSignalSDKWorker.js
+src/static/sw.js
+src/static/browserconfig.xml
+src/static/OneSignalSDKUpdaterWorker.js
+src/static/OneSignalSDKWorker.js
 
 # Logs
 logs
