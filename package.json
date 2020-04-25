@@ -56,7 +56,8 @@
     "@nuxtjs/sitemap": "^2.2.1",
     "lru-cache": "^5.1.1",
     "nuxt": "^2.12.2",
-    "vee-validate": "^3.3.0"
+    "vee-validate": "^3.3.0",
+    "web-streams-polyfill": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
