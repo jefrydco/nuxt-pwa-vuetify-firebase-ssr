@@ -12,7 +12,8 @@
     "firebase-functions": "^3.6.1",
     "lru-cache": "^5.1.1",
     "nuxt": "^2.12.2",
-    "vee-validate": "^3.3.0"
+    "vee-validate": "^3.3.0",
+    "web-streams-polyfill": "^2.1.1"
   },
   "engines": {
     "node": "10"
