@@ -70,10 +70,10 @@
 </template>
 
 <script>
-import { ValidationObserver, ValidationProvider, extend } from "vee-validate";
-import { required } from "vee-validate/dist/rules";
-import Logo from "~/components/Logo.vue";
-import VuetifyLogo from "~/components/VuetifyLogo.vue";
+import { ValidationObserver, ValidationProvider, extend } from 'vee-validate'
+import { required } from 'vee-validate/dist/rules'
+import Logo from '~/components/Logo.vue'
+import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
@@ -85,10 +85,10 @@ export default {
   data() {
     return {
       example: null
-    };
+    }
   },
   mounted() {
-    extend("required", required);
+    extend('required', required)
   }
-};
+}
 </script>
