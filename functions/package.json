@@ -2,18 +2,18 @@
   "name": "nuxt-firebase-functions",
   "private": true,
   "dependencies": {
-    "@nuxt/http": "^0.5.0",
-    "@nuxtjs/google-analytics": "^2.2.3",
+    "@nuxt/http": "^0.5.10",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "@nuxtjs/sentry": "^4.0.2",
-    "@nuxtjs/sitemap": "^2.2.1",
-    "@nuxtjs/vuetify": "^1.11.0",
-    "firebase-admin": "^8.11.0",
-    "firebase-functions": "^3.6.1",
-    "lru-cache": "^5.1.1",
-    "nuxt": "^2.12.2",
-    "vee-validate": "^3.3.0",
-    "web-streams-polyfill": "^2.1.1"
+    "@nuxtjs/sentry": "^4.2.1",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "firebase-admin": "^9.0.0",
+    "firebase-functions": "^3.8.0",
+    "lru-cache": "^6.0.0",
+    "nuxt": "^2.13.3",
+    "vee-validate": "^3.3.7",
+    "web-streams-polyfill": "^3.0.0"
   },
   "engines": {
     "node": "10"
